@@ -1,4 +1,4 @@
-package lab4;
+
 
 class Hobbit extends Character{
     public Hobbit() {
@@ -11,6 +11,6 @@ class Hobbit extends Character{
     }
 
     public void toCry() {
-        
+
     }
 }

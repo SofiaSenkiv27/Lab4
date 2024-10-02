@@ -1,4 +1,4 @@
-package lab4;
+
 import java.util.Random;
 class King extends Character{
     public King() {

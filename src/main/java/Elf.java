@@ -1,4 +1,4 @@
-package lab4;
+
 
 class Elf extends Character{
     public Elf() {
@@ -13,4 +13,6 @@ class Elf extends Character{
             c.power--;
         }
     }
+
+    
 }

@@ -1,4 +1,4 @@
-package lab4;
+
 
 class GameManager {
     public void fight(Character c1, Character c2) {
