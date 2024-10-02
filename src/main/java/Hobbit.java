@@ -1,16 +1,6 @@
 
-
-class Hobbit extends Character{
+public class Hobbit extends Character {
     public Hobbit() {
-        super(0, 3);
-    }
-
-    @Override
-    public void kick(Character c) {
-        toCry();
-    }
-
-    public void toCry() {
-
+        super(0, 3, new HobbitKickStrategy());
     }
 }

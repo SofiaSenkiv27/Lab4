@@ -21,13 +21,4 @@ class GameManager {
         System.out.println("Fight is over.");
     }
 
-    public static void main(String[] args) {
-        CharacterFactory factory = new CharacterFactory();
-        GameManager gameManager = new GameManager();
-
-        Character hero1 = factory.createCharacter();
-        Character hero2 = factory.createCharacter();
-
-        gameManager.fight(hero1, hero2);
-    }
 }

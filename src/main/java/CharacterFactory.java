@@ -1,15 +1,17 @@
 
-import java.util.Random;
-class CharacterFactory {
-    public Character createCharacter() {
-        Random rand = new Random();
-        int characterType = rand.nextInt(5);
-        switch (characterType) {
-            case 0: return new Hobbit();
-            case 1: return new Elf();
-            case 2: return new King();
-            case 3: return new Knight();
-            default: return new Hobbit();
+public class CharacterFactory {
+    public Character createCharacter(String type) {
+        switch (type) {
+            case "Hobbit":
+                return new Hobbit();
+            case "Elf":
+                return new Elf();
+            case "King":
+                return new King();
+            case "Knight":
+                return new Knight();
+            default:
+                throw new IllegalArgumentException("Unknown character type");
         }
     }
 }

@@ -2,13 +2,17 @@
 abstract class Character {
     protected int power;
     protected int hp;
+    protected KickStrategy kickStrategy;
 
-    public Character(int power, int hp) {
+    public Character(int power, int hp, KickStrategy kickStrategy) {
         this.power = power;
         this.hp = hp;
+        this.kickStrategy = kickStrategy;
     }
 
-    public abstract void kick(Character c);
+    public void kick(Character defender) {
+        kickStrategy.kick(this, defender);
+    }
 
     public boolean isAlive() {
         return this.hp > 0;
@@ -41,6 +45,10 @@ abstract class Character {
 
     public void printStatus() {
         System.out.println(this);
+    }
+
+    public void decreasePower() {
+        power--;
     }
 
 }
